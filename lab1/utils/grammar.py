@@ -47,7 +47,7 @@ class Grammar(object):
         """
 
         Returns:
-            dict: a Finite Automaton dictionary 
+            dict: a Finite Automation dictionary 
         """
         fa = {}
         q_list = self.vn
@@ -66,10 +66,13 @@ class Grammar(object):
 
                 except IndexError as error:
                     fa[q_list.index(element)][value[0]].append(len(q_list))
+        # print(fa)
         return fa
+        
 
-    def is_acceptable(self, string: str) -> bool:
-        """AI is creating summary for is_acceptable
+    def is_acceptable(self, string: str):
+        """
+        AI is creating summary for is_acceptable
 
         Args:
             string (str): the string to test

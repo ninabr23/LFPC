@@ -1,0 +1,14 @@
+digraph DFA {
+	rankdir=Q size=8.5
+	node [shape=doublecircle]
+	q3
+	node [shape=circle]
+	q0 -> q0 [label=a]
+	q0 -> q1 [label=b]
+	q0 -> q2 [label=f]
+	q1 -> q1 [label=c]
+	q1 -> q2 [label=d]
+	q1 -> q3 [label=d]
+	q2 -> q2 [label=b]
+	q2 -> q3 [label=f]
+}
