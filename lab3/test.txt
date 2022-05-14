@@ -1,0 +1,12 @@
+def fib ( var x ) {
+  if x < 2 then
+    return x;
+  else
+    return fib ( x - 1 ) + fib ( x - 2 );
+}   
+
+def main ( ) {
+    var x = 40;
+
+    fib ( x );
+}
