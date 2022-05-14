@@ -49,8 +49,10 @@ class Nfa(object):
         epsilon = self.epsilon
         dfa = {}
         qpr_list = []
-        keys_list = list(list(nfa.keys())[0])                #contains all the qs in nfa plus the qs created in dfa are also appended further
-        path_list = list(nfa[keys_list[0]].keys())
+        keys_list = list(list(nfa.keys())[0]) #listei i se atribuie prima cheie a nfa-ului
+        #print(keys_list)
+        path_list = list(nfa[keys_list[0]].keys()) #listei i se atribuite cheile valorii primei key din nfa
+        #print(path_list)
 
         # Computing first row of DFA transition table
 
