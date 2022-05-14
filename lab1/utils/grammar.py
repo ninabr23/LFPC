@@ -66,7 +66,6 @@ class Grammar(object):
 
                 except IndexError as error:
                     fa[q_list.index(element)][value[0]].append(len(q_list))
-        # print(fa)
         return fa
         
 
@@ -91,14 +90,19 @@ class Grammar(object):
                     accepting.append(key)
 
         for c in string:
-
+            print(f"Current state: {state}")
             if state != len(self.vn) and string.index(c) != len(string) - 1:
                 if c in transitions()[state].keys():
-                    state = transitions()[state][c][0]
+                    # print(f"Current state: {state}")
+                    state = transitions()[state][c][0]                    
+                    print(f"Next State: {state}")
+                    print(f"Transition variable: {c}")
                 else:
                     return False
             else:
                 if c in accepting:
+                    print(f"Next State: {len(self.vn)}")
+                    print(f"Transition variable: {c}")
                     # if transitions[state]
                     return True
                 else:

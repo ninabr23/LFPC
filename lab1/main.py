@@ -11,5 +11,5 @@ s = 'S'
 
 test = Grammar(vn=vn, vt=vt, p=p, s=s)
 print(test.is_acceptable('aabd'))
-test.graph()
+# test.graph()
 print(test.to_fa())
